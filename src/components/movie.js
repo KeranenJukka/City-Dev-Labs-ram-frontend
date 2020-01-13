@@ -16,20 +16,51 @@ class Movie extends React.Component {
     constructor(props) {
         super();
 
+        this.state = {
+
+            reviews: <div id="reviewsloading">
+                        <div id="loader"></div>
+                    </div>
 
         }
 
 
- get = () => {
+        this.id = "";
 
-    axios.get('/movie')
+        }
+
+
+ getMovie = () => {
+
+ var noReviews = () => {
+        
+        this.setState({
+            reviews: <div id="noreviews">
+                        <p>No reviews</p>
+                     </div>
+        })
+
+    }
+
+
+    axios.get('/movie', {
+        params: {
+          id: this.id
+        }
+      })
     .then(function (response) {
-      // handle success
-      console.log(response);
+      
+        if (response.data.length === 0) {
+         
+            console.log("moi")
+            noReviews();
+
+
+        }
+
     })
     .catch(function (error) {
-      // handle error
-      console.log(error);
+    
     })
   
 
@@ -64,9 +95,13 @@ for (var k = 0; k < movies.length; k++) {
 
 }
 
+this.id = theMovie.id;
+
+console.log(this.id)
+
 theMovie = <div id="themovie">
 
-                <img onClick={this.get} src={theMovie.picture}></img>
+                <img onClick={this.getMovie} src={theMovie.picture}></img>
 
                 <div id="themovieinfo">
                     <div id="movieinfotext">
@@ -81,7 +116,6 @@ theMovie = <div id="themovie">
            </div>
 
 
-
 return (
 
     <div id="themoviewrap">
@@ -89,6 +123,10 @@ return (
         <div id="themovietable">
 
         {theMovie}
+
+        <div id="movieline"></div>
+
+        {this.state.reviews}
 
         </div>
     </div>

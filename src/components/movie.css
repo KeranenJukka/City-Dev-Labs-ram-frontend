@@ -10,8 +10,9 @@
     max-width: 1000px;
     background: lightgray;
     margin: 0 auto;
-    
-    
+    min-height: 99vh;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -42,3 +43,38 @@
     padding: 20px;
     text-align: center;
 }
+
+
+#movieline {
+    margin: 0 auto;
+    width: 80%;
+    height: 1px;
+    background: black;
+    margin-top:30px;
+    margin-bottom: 30px;
+    
+}
+
+#reviewsloading {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#loader {
+    border: 7px solid #f3f3f3; /* Light grey */
+    border-top: 7px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
