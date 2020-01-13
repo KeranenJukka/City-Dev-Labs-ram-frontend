@@ -1,0 +1,53 @@
+
+#frontwrapper {
+    width: 100%;
+}
+
+
+
+#fronttable {
+
+    width: 100%;
+    max-width: 1000px;
+    background: lightgray;
+    margin: 0 auto;
+    
+}
+
+#frontmovieswrap {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.frontmovie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frontmovie img {
+
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+}
+
+.frontmovie img:hover {
+
+    transform: scale(1.07);
+
+}
+
+.frontmovie p {
+    text-align: center;
+}
+
+.movielink {
+    display: none;
+}

@@ -1,0 +1,44 @@
+#themoviewrap {
+
+    width: 100%;
+
+}
+
+#themovietable {
+
+    width: 100%;
+    max-width: 1000px;
+    background: lightgray;
+    margin: 0 auto;
+    
+    
+}
+
+
+#themovie {
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+}
+
+#themovie img {
+
+    width: 100%;    
+   max-width: 300px;
+
+}
+
+#themovieinfo {
+
+    display: flex;
+    align-items: center;
+
+}
+
+#movieinfotext {
+    padding: 20px;
+    text-align: center;
+}

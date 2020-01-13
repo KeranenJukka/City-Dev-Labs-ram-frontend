@@ -1,0 +1,124 @@
+
+
+{
+
+"movies": [
+
+
+            {
+                "name": "Psycho",
+                "year": 1960,
+                "director": "Alfred Hitchcock",
+                "text": "A Phoenix secretary embezzles forty thousand dollars from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+                "id": "psycho",
+                "picture": "/pictures/psycho.jpg"
+            },
+
+            {
+                "name": "The Good, the Bad and the Ugly",
+                "year": 1966,
+                "director": "Sergio Leone",
+                "text": "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+                "id": "goodbad",
+                "picture": "/pictures/goodbad.jpg"
+            },
+
+
+            {
+                "name": "Star Wars",
+                "year": 1977,
+                "director": "George Lucas",
+                "text": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+                "id": "starwars",
+                "picture": "/pictures/starwars.jpg"
+            },
+
+            {
+                "name": "Alien",
+                "year": 1979,
+                "director": "Ridley Scott",
+                "text": "After a space merchant vessel receives an unknown transmission as a distress call, one of the crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",
+                "id": "alien",
+                "picture": "/pictures/alien.jpg"
+            },
+
+            {
+                "name": "The Shining",
+                "year": 1980,
+                "director": "Stanley Kubrick",
+                "text": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
+                "id": "theshining",
+                "picture": "/pictures/shining.jpg"
+            },
+
+            {
+                "name": "Back to the Future",
+                "year": 1985,
+                "director": "Robert Zemeckis",
+                "text": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
+                "id": "backtothefuture",
+                "picture": "/pictures/backtothefuture.jpg"
+            },
+
+            
+            {
+                "name": "Titanic",
+                "year": 1997,
+                "director": "James Cameron",
+                "text": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+                "id": "titanic",
+                "picture": "/pictures/titanic.jpg"
+            },
+
+            {
+                "name": "The Matrix",
+                "year": 1999,
+                "director": "Lana Wachowski, Lilly Wachowski",
+                "text": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+                "id": "matrix",
+                "picture": "/pictures/matrix.jpg"
+            },
+
+            {
+                "name": "City of God",
+                "year": 2002,
+                "director": "Fernando Meirelles, Kátia Lund",
+                "text": "In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.",
+                "id": "cityofgod",
+                "picture": "/pictures/cityofgod.jpg"
+            },
+
+            {
+                "name": "The Dark Knight",
+                "year": 2008,
+                "director": "Christopher Nolan",
+                "text": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+                "id": "darkknight",
+                "picture": "/pictures/darkknight.jpg"
+                
+            },
+
+            {
+                "name": "Inception",
+                "year": 2010,
+                "director": "Christopher Nolan",
+                "text": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+                "id": "inception",
+                "picture": "/pictures/inception.jpg"
+                
+            },
+
+            {
+                "name": "The Wailing",
+                "year": 2016,
+                "director": "Hong-jin Na",
+                "text": "Soon after a stranger arrives in a little village, a mysterious sickness starts spreading. A policeman, drawn into the incident, is forced to solve the mystery in order to save his daughter.",
+                "id": "wailing",
+                "picture": "/pictures/wailing.jpg"
+                
+            }
+
+
+]
+
+}
