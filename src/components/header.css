@@ -1,4 +1,7 @@
 
+#forrender {
+    display: none;
+}
 
 #headerwrap {
 
@@ -8,4 +11,43 @@
     top: 0;
     background: tomato;
 
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.navlink {
+
+    display: none;
+
+}
+
+#rateamovielogo {
+
+    position: relative;
+    left: 10%;
+
+}
+
+#rateamovielogo p {
+    margin: 0;
+    padding:0;
+    cursor: pointer;
+}
+
+#loginnav, #loginnav2 {
+
+    display: flex;
+    position: absolute;
+    right: 10%;
+}
+
+#loginnav p, #loginnav2 p {
+
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
 }

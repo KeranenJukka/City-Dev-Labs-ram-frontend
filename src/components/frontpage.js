@@ -72,6 +72,7 @@ class Frontpage extends React.Component {
 
 render () {
 
+console.log(toJS(this.props.store.user))
 
 var movies = this.props.store.movies;
 

@@ -1,0 +1,53 @@
+
+#createwrap {
+
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+}
+
+
+#createcont {
+    
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+
+    background: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+#createcont h1 {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+#createcont input {
+    width: 100%;
+    padding: 7px;
+}
+
+#sendbutton {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background: tomato;
+    user-select: none;
+}
+
+#sendbutton p {
+
+    margin: 0;
+    padding:0;
+
+}

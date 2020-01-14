@@ -9,12 +9,12 @@ var movies = films.movies;
 
 class store {
 
- movies = movies;
+movies = movies;
  
-
-report () {
-  console.log(this.movies)
-}
+user = observable({
+    username: "",
+    token: ""
+})
 
 
 }

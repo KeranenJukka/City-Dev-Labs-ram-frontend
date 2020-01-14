@@ -78,3 +78,80 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+
+  #reviewbox {
+
+    height: auto;
+
+  }
+
+  #reviewbox p {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 30px;
+  }
+
+
+  #noreviews {
+        height: auto;
+  }
+
+  #noreviews p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+  }
+
+#reviewbox2 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#ratingbox {
+
+    display: flex;
+    align-items: center;
+
+}
+
+#ratingbox p {
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+#reviewtext {
+
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+
+}
+
+#sendreviewbutton {
+
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background: tomato;
+    user-select: none;
+
+}
+
+#sendreviewbutton p {
+    margin: 0;
+    padding: 0;
+}
+
+#movieforrender {
+
+    display: none;
+
+}

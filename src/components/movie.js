@@ -26,46 +26,71 @@ class Movie extends React.Component {
 
 
         this.id = "";
+        this.rating = "1";
+        this.text = "";
+
 
         }
 
 
- getMovie = () => {
+        sendReview = () => {
 
- var noReviews = () => {
+            console.log(this.rating)
+            console.log(this.text)
+
+        }
+
+        changeRating = (e) => {
+
+            this.rating = e.target.value; 
+
+        }
+
+
+        changeText = (e) => {
+
+            this.text = e.target.value; 
+
+        }
+
+
+
+        getMovie = () => {
+
+
+        var noReviews = () => {
+                
+                this.setState({
+                    reviews: <div id="noreviews">
+                                <p>No reviews yet!</p>
+                            </div>
+                })
+
+            }
+
+
+            axios.get('/movie', {
+                params: {
+                id: this.id
+                }
+            })
+            .then(function (response) {
+            
+                if (response.data.length === 0) {
+                
+                    noReviews();
+
+
+                }
+
+            })
+            .catch(function (error) {
+            
+            })
+
+        }
         
-        this.setState({
-            reviews: <div id="noreviews">
-                        <p>No reviews</p>
-                     </div>
-        })
 
-    }
-
-
-    axios.get('/movie', {
-        params: {
-          id: this.id
-        }
-      })
-    .then(function (response) {
-      
-        if (response.data.length === 0) {
-         
-            console.log("moi")
-            noReviews();
-
-
-        }
-
-    })
-    .catch(function (error) {
-    
-    })
-  
-
- }
-        
 
 
 componentDidMount () {
@@ -74,10 +99,13 @@ componentDidMount () {
 
     gsap.to(loadingScreen, 1, {right: "-101%"})
 
+    this.getMovie();
+
 }
 
 
 render () {
+
 
 var movie = window.location.search.split("");
 movie.shift();
@@ -97,11 +125,11 @@ for (var k = 0; k < movies.length; k++) {
 
 this.id = theMovie.id;
 
-console.log(this.id)
+
 
 theMovie = <div id="themovie">
 
-                <img onClick={this.getMovie} src={theMovie.picture}></img>
+                <img src={theMovie.picture}></img>
 
                 <div id="themovieinfo">
                     <div id="movieinfotext">
@@ -116,6 +144,53 @@ theMovie = <div id="themovie">
            </div>
 
 
+var reviewBox;
+
+if (this.props.store.user.username.length === 0) {
+
+    reviewBox = <div id="reviewbox">
+
+                <p>Log in to write a review.</p>
+
+                </div>
+
+}
+
+else if (this.props.store.user.username.length !== 0) {
+
+    reviewBox = <div id="reviewbox2">
+
+
+                <p>Username: {this.props.store.user.username}</p>
+
+                <div id="ratingbox">
+                <p>Rating:</p>
+                <select onChange={this.changeRating}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                </div>
+
+                <textarea onChange={this.changeText} id="reviewtext"></textarea>
+
+                <div onClick={this.sendReview} id="sendreviewbutton">
+                    <p>Send</p>
+                </div>
+
+
+                </div>
+
+}
+
+
 return (
 
     <div id="themoviewrap">
@@ -126,9 +201,14 @@ return (
 
         <div id="movieline"></div>
 
+        {reviewBox}
+
         {this.state.reviews}
+        <p>{this.props.store.user.username}</p>
 
         </div>
+
+        
     </div>
 
 )

@@ -9,6 +9,8 @@ import Header from './components/header';
 import FrontPage from './components/frontpage';
 import Movie from './components/movie';
 import MyReviews from './components/myreviews';
+import CreateAccount from './components/createaccount';
+import Login from './components/login';
 
 
 import Store from './mobx/mobx.js';
@@ -23,10 +25,12 @@ function App() {
 
     <div id="loadingscreen"></div>
 
-      <Header />
+      <Header store={Store} />
       <Route exact path='/' component={() => <FrontPage store={Store} />}/>
       <Route path='/movie' component={() => <Movie store={Store} />}/>
       <Route path='/myreviews' component={() => <MyReviews store={Store} />}/>
+      <Route path='/createaccount' component={() => <CreateAccount store={Store} />}/>
+      <Route path='/login' component={() => <Login store={Store} />}/>
 
     </div>
     </BrowserRouter>
