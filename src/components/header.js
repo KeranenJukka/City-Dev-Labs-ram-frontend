@@ -21,14 +21,10 @@ class Header extends React.Component {
     constructor(props) {
         super();
 
-        this.state = {
-
-            nav: ""
 
         }
 
 
-        }
 
 
     logOut = () => {
@@ -68,17 +64,9 @@ class Header extends React.Component {
 
 
 
-
-
-    componentDidMount() {
-
-        
-
-    }
-
-
 render () {
 
+    
 
     var user = toJS(this.props.store.user);
 

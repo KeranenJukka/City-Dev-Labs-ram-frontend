@@ -80,6 +80,25 @@
   }
 
 
+  #reviewsall {
+
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background: tomato;
+
+  }
+
+  .moviereview {
+
+    background: yellow;
+
+
+  }
+
+
   #reviewbox {
 
     height: auto;
