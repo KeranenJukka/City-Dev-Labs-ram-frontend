@@ -7,6 +7,8 @@ import { observer } from "mobx-react";
 
 import { toJS } from "mobx";
 
+import gsap from 'gsap';
+
 import "./header.css";
 
 
@@ -26,6 +28,14 @@ class Header extends React.Component {
 
 
 
+        setLoadingScreen = () => {
+            
+            var loadingScreen = document.getElementById("loadingscreen");
+            gsap.to(loadingScreen, 1, {right: "0%"});
+
+        }
+
+
 
     logOut = () => {
 
@@ -40,19 +50,40 @@ class Header extends React.Component {
         switch(x) {
 
             case "login":
-            document.getElementById("navlogin").click();
+            
+            this.setLoadingScreen();
+            setTimeout(() => {
+                document.getElementById("navlogin").click(); 
+            }, 1000);
+            
             break;
 
             case "create":
+
+            this.setLoadingScreen();
+            setTimeout(() => {
             document.getElementById("navcreate").click();
+            }, 1000);
+            
             break;
 
             case "reviews":
-            document.getElementById("navreview").click();
+
+            this.setLoadingScreen();
+            setTimeout(() => {
+                document.getElementById("navreview").click();
+            }, 1000);
+            
             break;
 
             case "frontpage":
-            document.getElementById("navfront").click();
+           
+            this.setLoadingScreen();
+            setTimeout(() => {
+                document.getElementById("navfront").click();
+            }, 1000);
+            
+            
             break;
 
             default:
@@ -101,6 +132,8 @@ return (
 
     <div id="headerwrap">
         
+        <div id="headercont">
+
         <div id="rateamovielogo">
         <p onClick={() => this.changePage('frontpage')}>Rate a Movie</p>
         <Link id="navfront" className="navlink" to="/"></Link>
@@ -110,6 +143,7 @@ return (
 
         <p id="forrender">{this.props.store.user.username}</p>
 
+        </div>
 
     </div>
 

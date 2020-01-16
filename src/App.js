@@ -28,7 +28,15 @@ function App() {
 
     <div id="loadingscreen"></div>
 
+    <div id="background">
+    <h1>RATE A MOVIE</h1>
+    <h2>RATE A MOVIE</h2>
+    </div>
+
       <Header store={Store} />
+
+      <div id="emptyspace"></div>
+
       <Route exact path='/' component={() => <FrontPage store={Store} />}/>
       <Route path='/movie' component={() => <Movie store={Store} />}/>
       <Route path='/myreviews' component={() => <MyReviews store={Store} />}/>

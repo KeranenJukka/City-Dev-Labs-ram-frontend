@@ -6,15 +6,26 @@
 #headerwrap {
 
     height: 60px;
-    width: 100%;
-    
+    width: 100%;   
     top: 0;
-    background: tomato;
+    left: 0;
+    background: var(--color1);
+    position: fixed;
+    z-index: 1000;
+    border-bottom: solid 1px var(--color3);
+}
 
+#headercont {
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+
+    
     display: flex;
     align-items: center;
     box-sizing: border-box;
-
 }
 
 .navlink {
@@ -26,7 +37,7 @@
 #rateamovielogo {
 
     position: relative;
-    left: 10%;
+    left: 10px;
 
 }
 
@@ -40,7 +51,8 @@
 
     display: flex;
     position: absolute;
-    right: 10%;
+    right: 10px;
+
 }
 
 #loginnav p, #loginnav2 p {
@@ -48,6 +60,19 @@
     margin: 0;
     padding: 0;
     margin-left: 10px;
-    margin-right: 10px;
     cursor: pointer;
+}
+
+
+/*---------------------------*/
+
+@media (max-width: 600px) {
+
+    #headerwrap p {
+
+        font-size: 0.9rem;
+
+    }
+
+
 }

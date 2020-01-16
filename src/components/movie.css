@@ -1,18 +1,19 @@
 #themoviewrap {
 
     width: 100%;
-
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #themovietable {
 
     width: 100%;
     max-width: 1000px;
-    background: lightgray;
     margin: 0 auto;
-    min-height: 99vh;
-    padding: 10px;
+    min-height: calc(100vh - 60px);
     box-sizing: border-box;
+    background: var(--color1);
+    padding: 10px;
 }
 
 
@@ -49,7 +50,7 @@
     margin: 0 auto;
     width: 80%;
     height: 1px;
-    background: black;
+    background: var(--color3);
     margin-top:30px;
     margin-bottom: 30px;
     
@@ -85,36 +86,24 @@
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    padding: 10px;
     box-sizing: border-box;
-    background: tomato;
 
   }
 
   .moviereview {
 
-    background: yellow;
-
-
+    background: var(--color2);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
   }
 
-
-  #reviewbox {
-
-    height: auto;
-
-  }
-
-  #reviewbox p {
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      margin-bottom: 30px;
-  }
 
 
   #noreviews {
         height: auto;
+        margin-bottom: 30px;
   }
 
   #noreviews p {
@@ -124,13 +113,23 @@
 
   }
 
-#reviewbox2 {
+  #reviewbox {
+
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-}
+  }
+
+
+  #reviewbox p {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 30px;
+  }
+
 
 
 #ratingbox {
@@ -151,22 +150,33 @@
     width: 100%;
     max-width: 400px;
     height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
 }
 
 #sendreviewbutton {
-
-    margin-top: 20px;
-    padding: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     cursor: pointer;
-    background: tomato;
+    background: var(--color3);
     user-select: none;
-
+    margin-bottom: 30px;
+    border-radius: 5px;
 }
 
 #sendreviewbutton p {
     margin: 0;
     padding: 0;
+    color: var(--color1);
+}
+
+#sendreviewbutton:active {
+
+    filter: brightness(90);
+
 }
 
 #movieforrender {

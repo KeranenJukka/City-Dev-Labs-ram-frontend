@@ -1,11 +1,10 @@
 
 import React from 'react';
 
-import {Link} from 'react-router-dom';
+
 
 import { observer } from "mobx-react";
 
-import { toJS } from "mobx";
 
 import gsap from 'gsap';
 
@@ -13,7 +12,6 @@ import "./login.css";
 
 const axios = require('axios');;
 
-var bcrypt = require('bcryptjs');
 
 
 
@@ -79,6 +77,16 @@ const Login = observer(
 
                         this.props.store.user.username = username;
                         this.props.store.user.token = response.data.token;
+
+                        var loadingScreen = document.getElementById("loadingscreen")
+                        gsap.to(loadingScreen, 1, {right: "0%"})
+
+                        setTimeout(() => {
+                            var frontLink = document.getElementById("navfront");
+                            frontLink.click();
+                        }, 1000);
+
+
 
                     }
 

@@ -1,0 +1,17 @@
+
+#myreviewswrap {
+
+    width: 100%;
+
+}
+
+
+#myreviewscont {
+
+    width: 100%;
+    max-width: 1000px;
+    min-height: 99vh;
+    background: lightgray;
+    margin: 0 auto;
+
+}

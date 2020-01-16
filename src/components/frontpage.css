@@ -1,6 +1,8 @@
 
 #frontwrapper {
     width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -9,17 +11,16 @@
 
     width: 100%;
     max-width: 1000px;
-    background: lightgray;
     margin: 0 auto;
-    
+
+    background: var(--color1);
 }
 
 #frontmovieswrap {
-
+    padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
-    padding: 10px;
     box-sizing: border-box;
 }
 

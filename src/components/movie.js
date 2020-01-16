@@ -25,7 +25,9 @@ class Movie extends React.Component {
                         <div id="loader"></div>
                     </div>,
 
-            reviewbox: <p>TÄHÄN REVIEWBOX</p>
+            reviewbox: <p>TÄHÄN REVIEWBOX</p>,
+
+            averagescore: ""
 
         }
 
@@ -35,6 +37,14 @@ class Movie extends React.Component {
         this.text = "";
 
         this.reviewdone = "no";
+
+        }
+
+
+        setLoadingScreen = () => {
+            
+            var loadingScreen = document.getElementById("loadingscreen");
+            gsap.to(loadingScreen, 1, {right: "-101%"});
 
         }
 
@@ -196,7 +206,12 @@ class Movie extends React.Component {
 
                     var reviews = response.data;
 
+                    var averageScore = [];
+
                     reviews = reviews.map((x) => {
+
+
+                        averageScore.push(x.rating);
 
                         // Check if allready reviewed by user
                         if (x.username === this.username) {this.reviewdone = "yes"}
@@ -211,8 +226,21 @@ class Movie extends React.Component {
 
                             })
 
+                    var sum = averageScore.reduce((a, b) => {
+
+                        return a + b;
+
+                    })
+
+                    var finalScore = sum / averageScore.length;
+
+                    finalScore = finalScore.toFixed(2);
+
+                    
+
                     this.setState({
-                        reviews: reviews
+                        reviews: reviews,
+                        averagescore: finalScore
                     })
 
 
@@ -234,11 +262,9 @@ class Movie extends React.Component {
 
 componentDidMount () {
 
-    var loadingScreen = document.getElementById("loadingscreen");
-
-    gsap.to(loadingScreen, 1, {right: "-101%"})
-
     this.getMovie();
+    
+    window.scrollTo(0,0);
 
 }
 
@@ -271,7 +297,7 @@ this.id = theMovie.id;
 
 theMovie = <div id="themovie">
 
-                <img src={theMovie.picture}></img>
+                <img onLoad={this.setLoadingScreen} src={theMovie.picture}></img>
 
                 <div id="themovieinfo">
                     <div id="movieinfotext">
@@ -279,6 +305,7 @@ theMovie = <div id="themovie">
                     <p>{theMovie.year}</p>
                     <p>Director: {theMovie.director}</p>
                     <p>{theMovie.text}</p>
+                    <p>Average score: {this.state.averagescore}</p>
                     </div>
 
                 </div>

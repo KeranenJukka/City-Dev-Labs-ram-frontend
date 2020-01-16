@@ -38,7 +38,7 @@ class Frontpage extends React.Component {
 
         this.calc = this.calc + 1;
 
-        if (this.calc === 12) {
+        if (this.calc === this.props.store.movies.length) {
 
             var loadingScreen = document.getElementById("loadingscreen");
 
@@ -66,6 +66,13 @@ class Frontpage extends React.Component {
 
         }, 1000);
    
+
+    }
+
+
+    componentDidMount () {
+
+        window.scrollTo(0,0);
 
     }
 
