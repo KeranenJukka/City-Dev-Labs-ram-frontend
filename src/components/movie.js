@@ -21,11 +21,9 @@ class Movie extends React.Component {
 
         this.state = {
 
-            reviews: <div id="reviewsloading">
-                        <div id="loader"></div>
-                    </div>,
+            reviews: "",
 
-            reviewbox: <p>TÄHÄN REVIEWBOX</p>,
+            reviewbox: "",
 
             averagescore: ""
 
@@ -44,7 +42,7 @@ class Movie extends React.Component {
         setLoadingScreen = () => {
             
             var loadingScreen = document.getElementById("loadingscreen");
-            gsap.to(loadingScreen, 1, {right: "-101%"});
+            gsap.to(loadingScreen, 0.9, {right: "-101%"});
 
         }
 
@@ -57,7 +55,7 @@ class Movie extends React.Component {
 
             reviewBox = <div id="reviewbox">
 
-            <p>Log in to write a review.</p>
+            <p className="addmargin">Log in to write a review.</p>
 
             </div>
 
@@ -72,7 +70,7 @@ class Movie extends React.Component {
             reviewBox = <div id="reviewbox">
 
 
-                <p>Username: {this.props.store.user.username}</p>
+                <p className="addmargin">Username: {this.props.store.user.username}</p>
 
                 <div id="ratingbox">
                 <p>Rating:</p>
@@ -92,7 +90,7 @@ class Movie extends React.Component {
 
                 <textarea onChange={this.changeText} id="reviewtext"></textarea>
 
-                <div onClick={this.sendReview} id="sendreviewbutton">
+                <div onClick={this.sendReview} className="thebutton">
                     <p>Send</p>
                 </div>
 
@@ -108,7 +106,7 @@ class Movie extends React.Component {
 
             reviewBox = <div id="reviewbox">
 
-            <p>Allready reviewed!</p>
+            <p className="addmargin">Already reviewed!</p>
 
             </div>
 
@@ -297,7 +295,9 @@ this.id = theMovie.id;
 
 theMovie = <div id="themovie">
 
+                <div id="themoviepic">
                 <img onLoad={this.setLoadingScreen} src={theMovie.picture}></img>
+                </div>
 
                 <div id="themovieinfo">
                     <div id="movieinfotext">

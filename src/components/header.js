@@ -31,7 +31,7 @@ class Header extends React.Component {
         setLoadingScreen = () => {
             
             var loadingScreen = document.getElementById("loadingscreen");
-            gsap.to(loadingScreen, 1, {right: "0%"});
+            gsap.to(loadingScreen, 0.9, {right: "0%"});
 
         }
 
@@ -42,10 +42,36 @@ class Header extends React.Component {
         this.props.store.user.username = "";
         this.props.store.user.token = ""; 
 
+
+        var frontLink = document.getElementById("navfront");
+        frontLink.click();
+
+
     }
 
 
     changePage = (x) => {
+
+        var location = window.location.pathname;
+        location = location.toLowerCase();
+        location = location.split("");
+        location.shift();
+        location = location.join("");
+
+        if (location === x) {
+
+            
+            return null;
+
+        }
+
+        else if (window.location.pathname === "/" && x === "frontpage") {
+
+            
+            return null;
+
+        }
+
 
         switch(x) {
 
@@ -58,7 +84,7 @@ class Header extends React.Component {
             
             break;
 
-            case "create":
+            case "createaccount":
 
             this.setLoadingScreen();
             setTimeout(() => {
@@ -67,7 +93,7 @@ class Header extends React.Component {
             
             break;
 
-            case "reviews":
+            case "myreviews":
 
             this.setLoadingScreen();
             setTimeout(() => {
@@ -107,7 +133,7 @@ render () {
 
     nav =       <div id="loginnav">
                     <p onClick={() => this.changePage('login')}>Login</p>
-                    <p onClick={() => this.changePage('create')}>Create Account</p>
+                    <p onClick={() => this.changePage('createaccount')}>Create Account</p>
                     <Link id="navlogin" className="navlink" to="/login"></Link>
                     <Link id="navcreate" className="navlink" to="/createaccount"></Link>
                 </div>
@@ -118,7 +144,7 @@ render () {
 else {
 
         nav = <div id="loginnav2">
-                 <p onClick={() => this.changePage('reviews')}>My Reviews</p>
+                 <p onClick={() => this.changePage('myreviews')}>My Reviews</p>
                  <p onClick={this.logOut}>Log out</p>
                  <Link id="navreview" className="navlink" to="/myreviews"></Link>
             </div>

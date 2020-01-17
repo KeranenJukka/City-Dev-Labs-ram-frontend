@@ -111,8 +111,8 @@ getReviews = () => {
                     <p>rating: {x.rating}</p>
                     <p>{x.text}</p>
                     
-                    <div onClick={() => this.deleteReview(x._id)} className="deletebutton">
-                    <p>DELETE</p>
+                    <div onClick={() => this.deleteReview(x._id)} className="thebutton3">
+                    <p>Delete</p>
                     </div>
 
                     </div>
@@ -138,6 +138,12 @@ getReviews = () => {
 componentDidMount (){
 
     this.getReviews();
+
+    var loadingScreen = document.getElementById("loadingscreen");
+            
+    gsap.to(loadingScreen, 0.9, {right: "-101%"})
+
+    window.scrollTo(0,0);
 
 }
 

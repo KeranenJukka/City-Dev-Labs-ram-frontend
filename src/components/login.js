@@ -150,7 +150,7 @@ const Login = observer(
                         <input id="password" onChange={this.change} type="text"></input>
                         <p>Password</p>
 
-                        <div onClick={this.send} id="sendbutton">
+                        <div onClick={this.send} className="thebutton2">
                         <p>Send</p>
                         </div>
 

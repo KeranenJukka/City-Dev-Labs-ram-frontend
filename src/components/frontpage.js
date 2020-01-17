@@ -42,7 +42,7 @@ class Frontpage extends React.Component {
 
             var loadingScreen = document.getElementById("loadingscreen");
 
-            gsap.to(loadingScreen, 1, {right: "-101%"})
+            gsap.to(loadingScreen, 0.9, {right: "-101%"})
 
         }
 
@@ -53,7 +53,7 @@ class Frontpage extends React.Component {
      
         var loadingScreen = document.getElementById("loadingscreen");
         
-        gsap.to(loadingScreen, 1, {right: "0%"})
+        gsap.to(loadingScreen, 0.9, {right: "0%"})
 
         var l = 'link-' + x.target.id
 
@@ -79,7 +79,7 @@ class Frontpage extends React.Component {
 
 render () {
 
-console.log(toJS(this.props.store.user))
+
 
 var movies = this.props.store.movies;
 

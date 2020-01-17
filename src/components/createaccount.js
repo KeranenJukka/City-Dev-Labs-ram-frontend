@@ -87,6 +87,14 @@ const CreateAccount = observer(
                                 this.props.store.user.username = username;
                                 this.props.store.user.token = token;
 
+                                var loadingScreen = document.getElementById("loadingscreen")
+                                gsap.to(loadingScreen, 1, {right: "0%"})
+        
+                                setTimeout(() => {
+                                    var frontLink = document.getElementById("navfront");
+                                    frontLink.click();
+                                }, 1000);
+
                             }
 
                           })
@@ -156,7 +164,7 @@ const CreateAccount = observer(
                         <input id="password" onChange={this.change} type="text"></input>
                         <p>Password</p>
 
-                        <div onClick={this.send} id="sendbutton">
+                        <div onClick={this.send} className="thebutton2">
                         <p>Send</p>
                         </div>
 

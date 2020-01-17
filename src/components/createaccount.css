@@ -8,18 +8,18 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
-
+    padding: 10px;
 }
 
 
 #createcont {
     
-    padding: 20px;
+    padding: 10px;
     margin: 0 auto;
     width: 100%;
     max-width: 350px;
 
-    background: lightgray;
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,25 +29,37 @@
 
 #createcont h1 {
     font-size: 1.3rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #createcont input {
     width: 100%;
     padding: 7px;
+    box-sizing: border-box;
 }
 
-#sendbutton {
-    margin-top: 20px;
-    padding: 10px;
+.thebutton2 {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     cursor: pointer;
-    background: tomato;
+    background: var(--color3);
     user-select: none;
+    border-radius: 5px;
+    transition: transform 0.2s;
 }
 
-#sendbutton p {
-
+.thebutton2 p {
     margin: 0;
-    padding:0;
+    padding: 0;
+    color: var(--color1);
+}
+
+.thebutton2:active {
+
+    transform: scale(0.9);
 
 }
