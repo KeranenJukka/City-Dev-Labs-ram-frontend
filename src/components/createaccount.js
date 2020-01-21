@@ -1,11 +1,8 @@
 
 import React from 'react';
 
-import {Link} from 'react-router-dom';
 
 import { observer } from "mobx-react";
-
-import { toJS } from "mobx";
 
 import gsap from 'gsap';
 
@@ -13,8 +10,9 @@ import "./createaccount.css";
 
 const axios = require('axios');;
 
-var bcrypt = require('bcryptjs');
+require('dotenv').config();
 
+var bcrypt = require('bcryptjs');
 
 
 
@@ -59,7 +57,7 @@ const CreateAccount = observer(
                 var password = this.password;
                 var username = this.username;
 
-                bcrypt.genSalt(10, (err, salt) => {
+                bcrypt.genSalt(process.env.SALT, (err, salt) => {
                     bcrypt.hash(password, salt, (err, hash) => {
                         
                         

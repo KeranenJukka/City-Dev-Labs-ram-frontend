@@ -1,5 +1,5 @@
 
-import {observable, toJS} from 'mobx';
+import {observable} from 'mobx';
 
 import films from '../movies/movies.json';
 

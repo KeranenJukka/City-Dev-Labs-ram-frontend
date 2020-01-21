@@ -8,7 +8,6 @@ import './frontpage.css';
 import gsap from 'gsap';
 
 import { observer } from "mobx-react";
-import { toJS } from "mobx";
 
 
 

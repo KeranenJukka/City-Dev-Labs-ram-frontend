@@ -35,9 +35,7 @@ class MyReviews extends React.Component {
 
 deleteReview = (id) => {
 
-    console.log(id)
-
-
+    
     axios.delete('/deletereview', {
         params: {
         id: id,
@@ -71,7 +69,7 @@ deleteReview = (id) => {
 
 getReviews = () => {
 
-    axios.get('/myreviews', {
+    axios.get('/getmyreviews', {
         params: {
         username: this.props.store.user.username,
         token: this.props.store.user.token
@@ -88,9 +86,6 @@ getReviews = () => {
 
         var myReviews = res1.data;
         var movies = this.props.store.movies
-
-        console.log(myReviews)
-        console.log(movies)
 
         var movieName;
 

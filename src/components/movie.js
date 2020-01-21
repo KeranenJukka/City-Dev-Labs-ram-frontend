@@ -142,7 +142,7 @@ class Movie extends React.Component {
                 }
 
                 else if (response.data === "success") {
-                    console.log(response.data)
+                    
                     this.getMovie();
                     this.setReviewBox();
 
@@ -186,7 +186,7 @@ class Movie extends React.Component {
             }
 
 
-            axios.get('/movie', {
+            axios.get('/getmovie', {
                 params: {
                 id: this.id
                 }
@@ -296,7 +296,7 @@ this.id = theMovie.id;
 theMovie = <div id="themovie">
 
                 <div id="themoviepic">
-                <img onLoad={this.setLoadingScreen} src={theMovie.picture}></img>
+                <img alt="The movie" onLoad={this.setLoadingScreen} src={theMovie.picture}></img>
                 </div>
 
                 <div id="themovieinfo">
